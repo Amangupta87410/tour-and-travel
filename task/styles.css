@@ -1,0 +1,238 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    background-color: #f8f9fa;
+    padding-top: 76px;
+}
+.section-padding { padding: 6rem 0; }
+.section-title { font-family: 'Lora', serif; font-size: 2.8rem; color: #192a56; margin-bottom: 1rem; }
+.section-subtitle { font-size: 1.1rem; color: #6c757d; margin-bottom: 3rem; }
+
+/* Navbar Styling */
+.navbar-brand { font-family: 'Dancing Script', cursive; font-size: 2.2rem; color: #0d3d56 !important; }
+.navbar-nav .nav-link { font-weight: 500; text-transform: uppercase; font-size: 0.9rem; }
+.navbar-nav .nav-link.active { color: #0d6efd !important; }
+
+/* Page Headers */
+.page-header { padding: 8rem 0; text-align: center; color: #fff; background-size: cover; background-position: center; }
+.page-header.about-header { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/all-inclusive-wedding-packages-punta-cana-1.webp'); }
+.page-header.services-header { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop'); }
+.page-header.contact-header { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/contact01.jpg'); }
+.page-title { font-family: 'Lora', serif; font-size: 4rem; font-weight: 700; }
+.page-subtitle { font-size: 1.2rem; font-style: italic; }
+
+/* Homepage Specific */
+.hero-section { height: 100vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop') no-repeat center center; background-size: cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.hero-section .brand-name { font-family: 'Montserrat', sans-serif; font-size: 5rem; font-weight: 700; }
+.who-we-are-section { background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop'); background-size: cover; position: relative; }
+.who-we-are-section::before { content: ''; position: absolute; inset: 0; background-color: rgba(0,0,0,0.1); z-index: 1; }
+.who-we-are-section .container { position: relative; z-index: 2; }
+.who-we-are-section .row:hover .text-box, .who-we-are-section .row:hover .image-right {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+.text-box { background-color: rgba(255,255,255,0.88); padding: 2.5rem; backdrop-filter: blur(8px); border-radius: 0.3rem; }
+.image-right { border-radius: 0.3rem; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+.trip-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+    cursor: pointer;
+}
+.trip-card img {
+    width: 100%;
+    height: 280px; 
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.trip-card:hover img {
+    transform: scale(1.1);
+}
+.trip-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.trip-card:hover .trip-overlay {
+    opacity: 1;
+}
+.trip-title {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+.trip-card:hover .trip-title {
+    transform: translateY(0);
+}
+
+/* Home Services Section */
+.service-gallery {
+    display: flex;
+    gap: 1rem;
+    height: 350px;
+}
+.home-service-card {
+    flex: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: flex 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.home-service-card:hover {
+    flex: 5;
+}
+.home-service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-service-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: 0.2s;
+}
+.home-service-card:hover .home-service-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+.testimonials-section { background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); }
+.testimonials-section.bg-light { background: #f8f9fa; }
+.testimonial-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; height: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+.testimonial-card .stars { color: #ffc107; margin-bottom: 1rem; }
+.swiper-pagination-bullet-active { background-color: #192a56 !important; }
+.swiper-pagination { position: static; margin-top: 2rem; }
+.faq-section .accordion-item { border: none; border-bottom: 1px solid #e0e0e0; margin-bottom: 10px; }
+.faq-section .accordion-button { font-weight: 600; color: #333; background-color: #f8f9fa; }
+.faq-section .accordion-button:not(.collapsed) { color: #fff; background-color: #343a40; box-shadow: none; }
+.faq-section .accordion-button:focus { box-shadow: none; }
+.faq-section .accordion-button::after { font-family: "Font Awesome 5 Free"; content: "\f067"; font-weight: 900; background-image: none; }
+.faq-section .accordion-button:not(.collapsed)::after { content: "\f068"; }
+.faq-section .accordion-body { background-color: #fff; padding: 1.5rem; }
+.contact-section { position: relative; background-color: #192a56; color: #fff; padding-top: 13rem; padding-bottom: 8rem; }
+.contact-section .wave { position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg); }
+.contact-section .wave svg { position: relative; display: block; width: calc(100% + 1.3px); height: 100px; }
+.contact-section .wave .shape-fill { fill: #f8f9fa; }
+.contact-section .contact-form .form-control { background-color: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); border-radius: 0; color: #fff; }
+.contact-section .contact-form .form-control::placeholder { color: rgba(255,255,255,0.7); }
+.contact-section .contact-form .form-control:focus { background-color: transparent; box-shadow: none; border-bottom-color: #fff; }
+.contact-section .contact-form .btn-submit { background-color: #fd7e14; color: #fff; border: none; padding: 0.8rem 2.5rem; font-weight: 600; }
+.contact-section .contact-form .btn-submit:hover {
+    background-color: #e87311;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Testimonials Section (Common for Home and About) */
+.testimonials-section { background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); }
+.testimonial-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; height: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+.testimonial-card .stars { color: #ffc107; margin-bottom: 1rem; }
+.swiper-pagination-bullet-active { background-color: #192a56 !important; }
+.swiper-pagination { position: static; margin-top: 2rem; }
+
+
+
+
+/* About Us Page Specific */
+.mission-vision-section .feature-box { padding: 2.5rem; text-align: center; background-color: #ffffff; border: 1px solid #e9ecef; border-radius: 0.5rem; height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.mission-vision-section .feature-box:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+.feature-icon { font-size: 3rem; color: #192a56; margin-bottom: 1.5rem; }
+.feature-title { font-family: 'Lora', serif; font-size: 1.5rem; color: #333; margin-bottom: 1rem; }
+.why-choose-us-section .image-stack { position: relative; min-height: 450px; }
+.image-stack-background, .image-stack-foreground { border-radius: 0.5rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); overflow: hidden; }
+.image-stack-background { position: absolute; top: 0; right: 0; width: 80%; height: 80%; }
+.image-stack-foreground { position: absolute; bottom: 0; left: 0; width: 65%; height: 60%; border: 5px solid #fff; }
+.image-stack img { width: 100%; height: 100%; object-fit: cover; }
+.checklist { list-style: none; padding-left: 0; }
+.checklist li { padding-left: 2rem; position: relative; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 500; }
+.checklist li::before { content: '\f058'; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #192a56; font-size: 1.2rem; }
+/* Final Contact Form Section (About Page) */
+.final-contact-section { padding: 6rem 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/ChatGPT\ Image\ Jul\ 22\,\ 2025\,\ 04_18_24\ PM.png') no-repeat center center; background-size: cover; color: #fff; }
+.contact-title { font-family: 'Lora', serif; font-size: 4rem; font-weight: 700; line-height: 1.2; }
+.final-contact-section .contact-form .form-control { background-color: rgba(255,255,255,0.9); border: none; border-radius: 0.25rem; padding: 0.8rem 1rem; color: #333; }
+.final-contact-section .contact-form .form-control::placeholder { color: #888; }
+.final-contact-section .contact-form .btn-submit { background-color: #0d3d56; color: #fff; border: none; padding: 0.8rem 2.5rem; font-weight: 600; width: 100%; }
+.final-contact-section .contact-form .btn-submit:hover {
+    background-color: #082538;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Services Page Specific */
+.service-page-card { background-color: #fff; border-radius: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.07); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; display: flex; flex-direction: column; }
+.service-page-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+.service-image { width: 100%; height: 200px; object-fit: cover; }
+.service-content { padding: 1.5rem; text-align: center; display: flex; flex-direction: column; flex-grow: 1; }
+.service-content .service-icon { font-size: 2.5rem; color: #192a56; margin-bottom: 1rem; }
+.service-title { font-family: 'Lora', serif; font-size: 1.5rem; margin-bottom: 1rem; color: #333; }
+.service-text { flex-grow: 1; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.service-link { font-weight: 600; text-decoration: none; color: #192a56; }
+.service-link i { transition: transform 0.3s ease; }
+.service-link:hover i { transform: translateX(5px); }
+
+/* Contact Page Specific */
+.contact-details-box { background-color: #fff; padding: 2rem; border-radius: 0.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%; }
+.contact-item { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
+.contact-item i { font-size: 1.5rem; color: #192a56; width: 40px; margin-top: 5px; }
+.contact-item h5 { font-family: 'Lora', serif; margin-bottom: 0.25rem; }
+.social-icons .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: #e9ecef; color: #192a56; margin-right: 0.5rem; transition: all 0.3s ease; }
+.social-icons .social-icon:hover { background-color: #192a56; color: #fff; }
+.contact-form-main .form-control { padding: 0.9rem 1rem; border-radius: 0.25rem; border: 1px solid #ced4da; }
+.contact-form-main .form-control:focus { border-color: #192a56; box-shadow: 0 0 0 0.25rem rgba(25, 42, 86, 0.25); }
+.contact-form-main .btn-primary { background-color: #192a56; border-color: #192a56; padding: 0.9rem; font-weight: 600; }
+
+/* Footer Styling */
+.main-footer { background-color: #ffffff; color: #333; padding-top: 4rem; padding-bottom: 1rem; border-top: 1px solid #e0e0e0; }
+.footer-logo { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: #0d3d56; margin-bottom: 1rem; }
+.footer-links h5 { font-weight: 700; color: #192a56; margin-bottom: 1rem; }
+.footer-links ul { list-style: none; padding-left: 0; }
+.footer-links ul li a { text-decoration: none; color: #555; margin-bottom: 0.75rem; display: inline-block; }
+.footer-bottom { border-top: 1px solid #e0e0e0; padding-top: 1rem; font-size: 0.9rem; color: #6c757d; }
+
+
+@media (max-width: 768px) {
+    .hero-section .brand-name {
+        font-size: 3rem;
+    }
+    .hero-section .welcome-text {
+        font-size: 1.5rem;
+    }
+    .home-services-section .service-gallery {
+        flex-direction: column;
+        height: auto;
+    }
+    .home-service-card, .home-service-card:hover {
+        flex: auto;
+        height: 250px;
+    }
+    .home-service-card .home-service-title {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .contact-title {
+        font-size: 2.5rem;
+    }
+}
